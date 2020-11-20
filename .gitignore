@@ -1,0 +1,4 @@
+*.bak
+vendor/*
+const.php
+tmp_file.html
