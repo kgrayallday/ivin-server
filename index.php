@@ -44,11 +44,11 @@
     </div id="container">
     
 
-    <div class="footer">
+<!--    <div class="footer">
     <p>Designed, Created and Maintained by Kyle Gray</p>
     <p>Based in Vancouver BC, Canada</p>
     <p><a>click here to contact</a></p>
-    </div class="footer">
+    </div class="footer"> -->
 
     <script>
 
