@@ -288,7 +288,6 @@ for($i=0;$i<count($scans_array);$i++){
 
 // sending details
 $mail->AddAddress($const_KyleEmail);
-$mail->AddAddress($const_AccountEmail);
 $mail->AddAddress($const_DaveEmail);
 $mail->AddReplyTo($const_AccountEmail);
 $mail->isHTML(true);
