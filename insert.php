@@ -53,7 +53,6 @@ $mail->Username = $account;
 $mail->Password = $password;
 $mail->setFrom($const_AccountEmail);
 
-// CONFIDENTIAL Google Oauth credentials, !!! PLACE IN CONST FILE IS UPLOADING TO GITHUB !!!
 $clientId = $const_ClientId;
 $clientSecret = $const_ClientSecret;
 //Obtained by configuring and running get_oauth_token.php

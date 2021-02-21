@@ -1,5 +1,4 @@
-<?php
-
+<?php 
 function selectDateRange($startDate,$endDate){
     include 'const.php';
    
@@ -18,23 +17,28 @@ function selectDateRange($startDate,$endDate){
         echo("error desc: " . $connection -> error);
     }
 
-    //test dump 
-    while($row = mysqli_fetch_array($results)){
-        print_r($row);
-        echo $row;
-    }
-}
+    $results=$connection->query($sql_query);
 
-echo "should show last month begin date: ";
-echo date("Y-m-d H:i:s",strtotime("01:01:01 first day of previous month"));
-echo "</br>";
-echo "should show last month end date: ";
-echo date("Y-m-d H:i:s",strtotime("23:50:55 last day of previous month"));
-echo "</br>";
+    //test dump keys
+    foreach($results as $array){
+        foreach($array as $key=>$value){ 
+            echo $key . ": " . $value;
+            echo "</br>";
+    }
+} 
+
+}
 
 $lastMonthStart = date("Y-m-d H:i:s",strtotime("01:01:01 first day of previous month"));
 $lastMonthEnd = date("Y-m-d H:i:s",strtotime("23:52:01 last day of previous month"));
 
+echo "TEST LAST MONTH RANGE: ";
+echo "</br>";
+echo "last month start: " . $lastMonthStart;
+echo "<br>";
+echo "last month end: " . $lastMonthEnd;
+
 selectDateRange($lastMonthStart,$lastMonthEnd);
 
 ?>
+
