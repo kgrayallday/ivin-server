@@ -10,7 +10,6 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMAILER\PHPMailer\Exception;
 use PHPMailer\PHPMailer\OAuth;
 use League\OAuth2\Client\Provider\Google;
-// phpOffice added 08/04/2020 - so far unused
 use PhpOffice\PhpSpreadhseet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 use PhpOffice\PhpSpreadsheet\IOFactory;
@@ -21,7 +20,7 @@ $counter = 0;
 
 date_default_timezone_set('America/Vancouver'); //sets default timezone to Vancouver time
 
-$date = date("m.d.y.H.i.s");
+$date = date("m.d.y.H:i:s");
 
 $inputjson = file_get_contents("php://input");
 $scans_array = json_decode($inputjson, TRUE);
