@@ -75,9 +75,6 @@ class iquery {
     }
 
 
-
-
-    
 }
 
 ?>
