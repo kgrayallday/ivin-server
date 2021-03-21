@@ -191,8 +191,8 @@ function selectMTD(){
 
     }else{
     echo "0 results";
-    }
-
+    } 
+    
+    mysqli_close($connection);
 }
-mysqli_close($connection);
 ?>
