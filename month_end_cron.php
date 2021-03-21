@@ -11,11 +11,24 @@ $newMail = new imail();
 $firstOfLast = date("Y-m-d H:i:s", strtotime("first day of previous month"));
 $lastOfLast = date("Y-m-d H:i:s", strtotime("last day of previous month"));
 
-$lastMonthQuery = $newQuery->dateRange($firstOfLast,$lastOfLast);
+$lastMonthSQLObject = $newQuery->dateRange($firstOfLast,$lastOfLast);
 // will need the remixer to make this into html string
 // then pass html string to mail 
 
-$newMail->send_mail('strings and attachments here');
+while($row = $lastMonthSQLObject->fetch_assoc()){
+			echo "<tr>";
+			echo "<td>" . $row['id'] . "</td>";
+			echo "<td>" . $row['job'] . "</td>";
+			echo "<td>" . $row['timestamp'] . "</td>";
+			echo "<td>" . $row['vin'] . "</td>";
+			echo "<td>" . $row['reading'] . "</td>";
+			echo "<td>" . $row['tire'] . "</td>";
+			echo "<td>" . $row['comment'] . "</td>";
+			echo "<td>" . $row['devid'] . "</td>";
+            echo "</tr>";
+}
+	
+newMail->send_mail(var_dump($lastMonthSQLObject));
 
 
 

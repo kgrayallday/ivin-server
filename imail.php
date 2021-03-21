@@ -49,7 +49,7 @@ class imail {
         );
         
         $mail->AddAddress($const_KyleEmail);
-        $mail->AddAddress($const_DaveEmail);
+        //$mail->AddAddress($const_DaveEmail);
         $mail->AddReplyTo($const_AccountEmail);
         $mail->isHTML(true);
         $mail->Subject = "TEST SUBJECT";
