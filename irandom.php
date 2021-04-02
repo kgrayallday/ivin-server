@@ -7,7 +7,7 @@
 
 
 
-class irandom{
+class random{
     function rand_string($length){
         $key = '';
         $keys = array_merge(range(0,9),range('A',"Z"));

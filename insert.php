@@ -10,7 +10,7 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMAILER\PHPMailer\Exception;
 use PHPMailer\PHPMailer\OAuth;
 use League\OAuth2\Client\Provider\Google;
-use PhpOffice\PhpSpreadhseet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 use PhpOffice\PhpSpreadsheet\IOFactory;
 
