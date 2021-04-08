@@ -21,7 +21,7 @@ $sqliArray = $lastMonthSQLObject->fetch_all(MYSQLI_ASSOC);
 $emailBodyData = $myTablizer->webTable($sqliArray);
 $emailAttachment = $myTablizer->spreadsheet($emailBodyData);
 
-$newMail->send_mail_with_attachment($emailBodyData,$emailAttachment);
+$newMail->send_mail_with_attachment("IVIN - PREVIOUS MONTH SCANS",$emailBodyData,$emailAttachment);
 
 
 

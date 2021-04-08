@@ -66,7 +66,7 @@ class imail {
     // TODO:need function for including attachment
     // may also need to create a speadsheet generating class to create attaachments.
     
-    function send_mail_with_attachment($content, $attachment){
+    function send_mail_with_attachment($subject,$content,$attachment){
         require 'const.php';
         require 'vendor/phpmailer/phpmailer/src/PHPMailer.php';
         require 'vendor/phpmailer/phpmailer/src/Exception.php';
@@ -112,10 +112,10 @@ class imail {
         );
         
         $mail->AddAddress($const_KyleEmail);
-        //$mail->AddAddress($const_DaveEmail);
+        $mail->AddAddress($const_DaveEmail);
         $mail->AddReplyTo($const_AccountEmail);
         $mail->isHTML(true);
-        $mail->Subject = "TEST SUBJECT";
+        $mail->Subject = $subject;
         $mail->Body = $content;
         $mail->addAttachment($attachment);
 
